@@ -27,6 +27,9 @@
   main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 56px; }
   .lead { max-width: 62ch; margin: 0 auto 40px; text-align: center; color: var(--mist); text-wrap: balance; }
   .lead strong { color: var(--foam); font-weight: 400; }
+  .film { aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; background: var(--water); }
+  .film iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .filmlink { margin: 8px 0 40px; font-size: .9rem; color: var(--mist); text-align: center; }
   .shots { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 0; padding: 0; list-style: none; }
   .shots img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; }
   .shots span { display: block; margin-top: 6px; font-size: .85rem; letter-spacing: .08em; color: var(--mist); }
@@ -54,6 +57,12 @@
     ruins and the animals that live among them, with nothing to win and
     nowhere you have to be. You steer by looking where you want to go.
   </p>
+
+  <div class="film">
+    <iframe src="https://www.youtube-nocookie.com/embed/LKpfEWuEbvA" title="Noatun: Sunken Gardens, the film"
+            loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+  </div>
+  <p class="filmlink"><a href="https://youtu.be/LKpfEWuEbvA">Watch the film on YouTube</a> (4K, 85 seconds)</p>
 
   <ul class="shots">
     <li><img src="img/whale.jpg" alt="A humpback whale and her calf passing through a kelp forest" loading="lazy"><span>Humpback and calf</span></li>
