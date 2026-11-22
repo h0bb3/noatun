@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noatun: Sunken Gardens</title>
+<meta name="description" content="A free-diving garden in VR, native on Meta Quest 3.">
+<meta property="og:title" content="Noatun: Sunken Gardens">
+<meta property="og:description" content="A free-diving garden in VR, native on Meta Quest 3.">
+<meta property="og:image" content="https://h0bb3.github.io/noatun/img/hero.jpg">
+<meta property="og:type" content="website">
+<style>
+  :root { --deep: #04161d; --water: #0b3340; --foam: #e9f7f6; --mist: #9fc6c8; --glow: #7fe3d4; }
+  * { box-sizing: border-box; }
+  html { background: var(--deep); }
+  body { margin: 0; background: var(--deep); color: var(--foam);
+         font: 17px/1.6 "Bahnschrift", "DIN Alternate", "Segoe UI", system-ui, sans-serif; }
+  a { color: var(--glow); text-underline-offset: 3px; }
+  .hero { position: relative; height: 100svh; min-height: 420px; overflow: hidden; display: grid; place-items: center; text-align: center; }
+  .hero video, .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::after { content: ""; position: absolute; inset: 0;
+                 background: linear-gradient(to bottom, rgba(4,22,29,.15), rgba(4,22,29,.05) 55%, var(--deep)); }
+  .title { position: relative; z-index: 1; padding: 0 16px; text-shadow: 0 3px 18px rgba(0,0,0,.35); }
+  h1 { margin: 0; font-weight: 400; font-size: clamp(2.4rem, 9vw, 5.5rem); letter-spacing: .32em; margin-right: -.32em; }
+  .sub { margin: .6em 0 0; font-size: clamp(.95rem, 2.8vw, 1.5rem); letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase; }
+  .tag { margin: 1.6em 0 0; font-size: clamp(.95rem, 2.2vw, 1.15rem); color: var(--foam); }
+  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 56px; }
+  .lead { max-width: 62ch; margin: 0 auto 40px; text-align: center; color: var(--mist); text-wrap: balance; }
+  .lead strong { color: var(--foam); font-weight: 400; }
+  .shots { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 0; padding: 0; list-style: none; }
+  .shots img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; }
+  .shots span { display: block; margin-top: 6px; font-size: .85rem; letter-spacing: .08em; color: var(--mist); }
+  h2 { margin: 56px 0 12px; font-weight: 400; font-size: 1rem; letter-spacing: .3em; text-transform: uppercase; color: var(--glow); }
+  section p { max-width: 68ch; margin: 0 0 12px; color: var(--mist); }
+  footer { border-top: 1px solid var(--water); margin-top: 56px; padding-top: 20px; font-size: .9rem; color: var(--mist); }
+  footer p { margin: 0 0 8px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <video autoplay muted loop playsinline poster="img/hero.jpg" aria-hidden="true">
+    <source src="img/hero.mp4" type="video/mp4">
+  </video>
+  <div class="title">
+    <h1>NOATUN</h1>
+    <p class="sub">Sunken Gardens</p>
+    <p class="tag">A free-diving garden in VR, native on Meta Quest 3</p>
+  </div>
+</header>
+
+<main>
+  <p class="lead">
+    <strong>Slip under the surface and swim.</strong> Kelp forests, coral, sunken
+    ruins and the animals that live among them, with nothing to win and
+    nowhere you have to be. You steer by looking where you want to go.
+  </p>
+
+  <ul class="shots">
+    <li><img src="img/whale.jpg" alt="A humpback whale and her calf passing through a kelp forest" loading="lazy"><span>Humpback and calf</span></li>
+    <li><img src="img/shark.jpg" alt="A shark gliding past, a shoal of small fish behind it" loading="lazy"><span>Shark</span></li>
+    <li><img src="img/reef.jpg" alt="Clownfish among kelp above a coral bed" loading="lazy"><span>Reef fish</span></li>
+    <li><img src="img/tholos.jpg" alt="A ring of sunken columns among kelp and coral" loading="lazy"><span>Sunken ruins</span></li>
+    <li><img src="img/submarine.jpg" alt="The hull and tower of a sunken submarine in shafts of light" loading="lazy"><span>The submarine</span></li>
+    <li><img src="img/night.jpg" alt="The seabed at night, lit by drifting points of green light" loading="lazy"><span>Night dive</span></li>
+  </ul>
+
+  <section>
+    <h2>What it is</h2>
+    <p>Every dive is a world grown from a seed: its own seabed, rock, gardens
+      and landmark, by day, at dusk or at night. Sharks, turtles, mantas,
+      reef fish and a humpback with her calf swim their own rounds in it.</p>
+    <p>It runs natively on the headset, with no computer attached. All
+      pictures on this page are rendered by the app itself.</p>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <p>In development. There is no download yet; progress is written up in
+      <a href="https://h0bb3.github.io/log/">the log</a>.</p>
+  </section>
+
+  <footer>
+    <p>Based on <a href="https://github.com/Noniv/abyssal-garden">Abyssal Garden</a>
+      by Maksymilian Dendura / Noniv (MIT licence), whose look, light and
+      water this keeps.</p>
+    <p>The shark, whale and reef fish models were generated with Tripo.</p>
+    <p>Made by <a href="https://github.com/h0bb3">h0bb3</a>.</p>
+  </footer>
+</main>
+</body>
+</html>
