@@ -92,6 +92,17 @@
   </section>
 
   <section>
+    <h2>How it is built</h2>
+    <p>Noatun is written in Rust. The <a href="https://bevy.org">Bevy</a>
+      engine runs the app, the sound and the input, and OpenXR
+      (through <a href="https://github.com/awtterpip/bevy_oxr">bevy_mod_openxr</a>)
+      connects it to the headset. The picture comes from a renderer of its
+      own on <a href="https://wgpu.rs">wgpu</a> and Vulkan: the fog, the
+      caustics, the light shafts, the plants and the animals are hand-written
+      WGSL shaders, carried over from the original's WebGPU ones.</p>
+  </section>
+
+  <section>
     <h2>Status</h2>
     <p>In development. There is no download yet; progress is written up in
       <a href="https://h0bb3.github.io/log/2026/11/22/noatun-sunken-gardens.html">the log</a>.</p>
